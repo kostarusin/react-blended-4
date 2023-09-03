@@ -11,10 +11,11 @@ export const App = () => {
         <Container>
           <SearchForm />
 
-          {todos.length === 0 && (
+          {todos.length === 0 ? (
             <Text textAlign="center">There are no any todos ... </Text>
+          ) : (
+            <TodoList />
           )}
-          <TodoList />
         </Container>
       </Section>
     </>
