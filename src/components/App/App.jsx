@@ -1,9 +1,10 @@
 import { Container, Header, SearchForm, Section, Text } from 'components';
 import { TodoList } from 'components/TodoList/TodoList';
 import { useSelector } from 'react-redux';
+import { selectTodos } from 'redux/selectors';
 
 export const App = () => {
-  const todos = useSelector(state => state.items);
+  const todos = useSelector(selectTodos);
   return (
     <>
       <Header />
